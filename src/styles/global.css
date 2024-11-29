@@ -1,0 +1,229 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif; /* Sleek font for modern feel */
+  background-color: #f4f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Center the app */
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Kanban Board Styling */
+.board {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(320px, 1fr)
+  ); /* Responsive grid */
+  gap: 20px;
+  justify-items: center;
+  padding: 30px 20px;
+  margin-top: 50px;
+  transition: grid-template-columns 0.3s ease-in-out;
+}
+
+/* Column Styling */
+.column {
+  background: #fff;
+  border-radius: 8px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+/* Column Hover Effect */
+.column:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Column Header Styling */
+.column h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Task List */
+.task-list {
+  min-height: 100px;
+  padding: 10px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  overflow-y: auto;
+  transition: background-color 0.3s ease;
+}
+
+/* Task Styling */
+.task {
+  background: #ffffff;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Task Hover and Active Effects */
+.task:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #f1f1f1;
+}
+
+.task:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: #f4f4f4;
+}
+
+/* Add Task Button */
+.add-task-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+}
+
+/* Add Task Button Hover and Active Effects */
+.add-task-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.add-task-button:active {
+  transform: translateY(0);
+  background-color: #003f7f;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .board {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .column {
+    padding: 15px;
+  }
+
+  .add-task-button {
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .column h2 {
+    font-size: 20px;
+  }
+
+  .add-task-button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+/* Column Styling */
+.column {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Task Styling */
+.task {
+  background: #ffffff;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: grab;
+  transition: transform 0.2s ease;
+}
+
+/* Active Task Styling */
+.task:active {
+  cursor: grabbing;
+  transform: scale(1.05);
+}
+
+/* Add these styles in your global CSS file */
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  padding: 20px;
+}
+
+/* Board Layout */
+.board {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Column Styling */
+.column {
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Task Styling */
+.task {
+  background: #ffffff;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: grab;
+  transition: transform 0.2s ease;
+}
+
+/* Hover and Active Effects */
+.task:hover {
+  background: #f1f1f1;
+  transform: translateY(-3px);
+}
+
+.task:active {
+  background: #e0e0e0;
+  transform: translateY(0);
+}
